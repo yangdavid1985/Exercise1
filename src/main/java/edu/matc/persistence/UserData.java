@@ -43,7 +43,7 @@ public class UserData {
             database.disconnect();
         } catch (SQLException e) {
             logger.error("SQL Exception..", e);
-            System.out.println("SearchUser.getAllUsers()...SQL Exception: " + e);
+            logger.error("SearchUser.getAllUsers()...SQL Exception: " + e);
         } catch (Exception e) {
             System.out.println("SearchUser.getAllUsers()...Exception: " + e);
         }
@@ -72,9 +72,9 @@ public class UserData {
 
                database.disconnect();
             } catch (SQLException e){
-                System.out.println("SearchUser.lastNameSearch().. SQL Exception: " + e);
+                logger.error("SearchUser.lastNameSearch().. SQL Exception: " + e);
             } catch (Exception e) {
-                System.out.println("SearchUser.lastNameSearch().. SQL Exception: " + e);
+                logger.error("SearchUser.lastNameSearch().. SQL Exception: " + e);
             }
 
         return searchByLastname;
